@@ -16,7 +16,7 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
   const api_key = useMemo(() => keys?.[0]?.id || "", [keys])
   const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "/" ? 
     location.origin :
-    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "https://massi-backend.vercel.app"
+    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "https://massi-backend.vercel.app/"
 
   useEffect(() => {
     if (!isLoading && !keys?.length) {
